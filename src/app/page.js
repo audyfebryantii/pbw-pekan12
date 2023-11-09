@@ -1,12 +1,18 @@
-'use client'
+"use client"
 
+import { useState } from "react"
 import Image from "next/image"
 import './globals.css'
 
 export default function Home() {
-
-  function clickHandler(){
-    alert('HAI!')
+  const [bravo, setBravo] = useState(0)
+  const handlerTambahBravo = () => {
+    setBravo(bravo+1)
+  }
+  
+  const [nama, setNama] = useState("Audy Febryanti")
+  const handlerGantiNama = () => {
+    setNama("Od")
   }
 
   return (
@@ -24,24 +30,25 @@ export default function Home() {
           </div>   
           <div className="content-bio-header-banner">
             <h1>
-              Audy Febryanti
+              {nama}
             </h1>
             <div className="bio-nim-header-banner">
               <p>
                 D121211005
               </p>
               <p>
-                Bravo 6, going dark
+                Bravo {bravo}, going dark
               </p>
             </div>
           </div>     
         </div>
         <div className="cta-banner-wrapper">
-          <a href=''>
-            <div className='cta-button' onClick={clickHandler}>
+            <div className='cta-button' onClick={handlerTambahBravo}>
               <p>Halo!</p>
             </div>
-          </a>
+            <div className='cta-button' style ={{marginTop: '12px'}} onClick={handlerGantiNama}>
+              <p>Ganti Nama</p>
+            </div>
         </div>
       </div>
     </div>

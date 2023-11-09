@@ -78,6 +78,7 @@ p{
 /*CTA*/
 .cta-banner-wrapper{
   width: 100%;
+  cursor: pointer;
 }
 .cta-button{
   display: flex;
