@@ -5,14 +5,19 @@ import Image from "next/image"
 import './globals.css'
 
 export default function Home() {
-  const [bravo, setBravo] = useState(0)
-  const handlerTambahBravo = () => {
-    setBravo(bravo+1)
-  }
   
   const [nama, setNama] = useState("Audy Febryanti")
-  const handlerGantiNama = () => {
-    setNama("Od")
+
+  const handleGantiNama = (event) => {
+    if (event.type === "click") {
+      setNama(document.querySelector("input[name='inputName']").value)
+    }
+  }
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      setNama(document.querySelector("input[name='inputName']").value)
+    }
   }
 
   return (
@@ -37,17 +42,17 @@ export default function Home() {
                 D121211005
               </p>
               <p>
-                Bravo {bravo}, going dark
+                What's this... emotion? I don't understand.
               </p>
             </div>
           </div>     
         </div>
         <div className="cta-banner-wrapper">
-            <div className='cta-button' onClick={handlerTambahBravo}>
-              <p>Halo!</p>
+            <div className='cta-input'>
+              <input name="inputName" placeholder="Masukkan nama" onKeyDown={handleKeyDown}></input>
             </div>
-            <div className='cta-button' style ={{marginTop: '12px'}} onClick={handlerGantiNama}>
-              <p>Ganti Nama</p>
+            <div className='cta-button' onClick={handleGantiNama}>
+              <p>Ganti nama</p>
             </div>
         </div>
       </div>
