@@ -1,0 +1,32 @@
+.diary-container {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 442px;
+    position: relative;
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.02);
+    overflow: hidden;    
+}
+
+.p-diary {
+    color: #1e1e1e;
+    text-align: left;
+    font: 400 16px 'PlusJakartaSans-Regular', sans-serif;
+    position: relative;
+    align-self: stretch;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+li {
+    list-style-type: none;
+}

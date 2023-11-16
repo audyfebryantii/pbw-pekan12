@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import './globals.css'
+import '@styles/home.css'
 
 export default function Home() {
   
@@ -21,7 +21,7 @@ export default function Home() {
   }
 
   return (
-    <div className="body">
+    <>
       <div className="banner-container">
       {/* Kartunya */}
         <div className="header-banner-wrapper"> 
@@ -56,6 +56,6 @@ export default function Home() {
             </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
