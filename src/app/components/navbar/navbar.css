@@ -1,3 +1,7 @@
+* {
+    font-family: DM Sans;
+}
+
 .navbar-container {
     display: flex;
     flex-direction: row;
@@ -7,18 +11,19 @@
     border-radius: 24px;
 }
 
-.navbar-container p {
-    color: black;
-}
-
-.navbar-text {
-    color: black;
-}
-
 .default {
-    color: gray;
+    color: #8a8a8a;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .active {
     font-weight: bolder;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: black;
 }
