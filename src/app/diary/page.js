@@ -9,16 +9,16 @@ export default function Diary() {
   const [isi_diary, setIsiDiary] = useState([]);
 
   const endpointAPI = "https://6555c14e84b36e3a431e405e.mockapi.io/diaryku";
-  // async function getAPI () {
-  //     try{
-  //         const res = await fetch(endpointAPI)
-  //         const diary = await res.json()
-  //         console.log(diary)
-  //     }
-  //     catch(error) {
-  //         console.log("error fetching data: ${error}")
-  //     }
-  // }
+  async function getAPI () {
+      try{
+          const res = await fetch(endpointAPI)
+          const diary = await res.json()
+          console.log(diary)
+      }
+      catch(error) {
+          console.log("error fetching data: ${error}")
+      }
+  }
 
   async function getAPI() {
     const res = await axios.get(endpointAPI);
@@ -52,7 +52,7 @@ export default function Diary() {
           ))}
         </ul>
       ) : (
-        "API not loading"
+        "API is loading"
       )}
     </div>
   );

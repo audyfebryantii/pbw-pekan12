@@ -75,10 +75,21 @@ p{
   align-self: stretch;
 
   border-radius: 12px;
-  background: rgba(191, 210, 150, 1);
 
   margin-top: 12px;
+
+  cursor: pointer;
 }
+
 .cta-button p{
   font-weight: 700;
+}
+
+.cta-button-disabled{
+  background: #d2d2d2;
+  cursor: not-allowed;
+}
+
+.cta-button-enabled{
+  background: rgba(191, 210, 150, 1);
 }

@@ -10,15 +10,16 @@
 
 body{
     background-color: #F4F4F4;
+    padding: 32px;
   
     /* Fill Container di Figma == 100% di JS*/
-    width: 100vw; 
-    height: 100vh;
+    width: 100%; 
+    min-height: 100vh;
   
     /* Arah Flex */
     display: flex;
     flex-direction: column;
-    row-gap: 32px;
+    row-gap: 12px;
   
     /* Kasih ke tengah flex */
     align-items: center;
