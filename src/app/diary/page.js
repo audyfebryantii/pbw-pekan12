@@ -3,6 +3,7 @@
 import "@styles/diary.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Link from "next/link";
 
 export default function Diary() {
   const [diary, setDiary] = useState([]);
@@ -43,12 +44,14 @@ export default function Diary() {
       {diary.length > 0 ? (
         <ul>
           {diary.map((item, idx) => (
-            <li>
+            <Link href={`/diary/${item}/${isi_diary[idx]}`}>
+            <li key = {idx}>
               <div className="diary-container">
                 <h1>{diary[idx]}</h1>
                 <p className="p-diary">{isi_diary[idx]}</p>
               </div>
             </li>
+            </Link>
           ))}
         </ul>
       ) : (
