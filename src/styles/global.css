@@ -10,18 +10,20 @@
 
 body{
     background-color: #F4F4F4;
-    padding: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   
     /* Fill Container di Figma == 100% di JS*/
-    width: 100%; 
+    width: 100vw; 
     min-height: 100vh;
   
     /* Arah Flex */
     display: flex;
     flex-direction: column;
-    row-gap: 12px;
+    row-gap: 24px;
   
     /* Kasih ke tengah flex */
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    overflow-x: hidden;
   }
