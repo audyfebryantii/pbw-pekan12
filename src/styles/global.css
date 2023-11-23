@@ -11,6 +11,7 @@
 body{
     background-color: #F4F4F4;
     padding-top: 32px;
+    padding-bottom: 32px;
   
     /* Fill Container di Figma == 100% di JS*/
     width: 100vw; 
